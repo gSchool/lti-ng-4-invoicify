@@ -1,11 +1,11 @@
 {
-  "name": "invoicify-frontend",
+  "name": "ng-invoicify-4",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "node server.js",
+    "build": "ng build --env=prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -26,6 +26,7 @@
     "angular": "^1.7.8",
     "angular-cli-ghpages": "^0.5.3",
     "core-js": "^2.4.1",
+    "express": "^4.17.1",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },

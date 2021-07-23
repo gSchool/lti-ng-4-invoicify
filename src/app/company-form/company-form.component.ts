@@ -20,7 +20,7 @@ export class CompanyFormComponent implements OnInit {
   successMessage: string;
   errorMessage: string;
 
-  company: object;
+  company: any;
 
   constructor(
     private dataService: DataService,
