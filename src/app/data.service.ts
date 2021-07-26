@@ -10,7 +10,7 @@ import "rxjs/add/observable/empty";
 
 @Injectable()
 export class DataService {
-  private baseUrl = "https://murmuring-brushlands-50984.herokuapp.com/api/";
+  private baseUrl = "https://stark-fjord-86269.herokuapp.com/api/";
 
   found: boolean = false;
 
