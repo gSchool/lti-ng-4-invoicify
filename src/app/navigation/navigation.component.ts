@@ -21,6 +21,10 @@ export class NavigationComponent implements OnInit {
     this.refreshUser();
   }
 
+  isAuthenticated() {
+    return this.authService.isAuthenticated()
+  }
+
   logout(){
     this.authService.logout().subscribe(
       success=> {

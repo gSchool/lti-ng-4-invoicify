@@ -14,7 +14,7 @@
                 </a>
             </div>
             <!--/.nav-collapse -->
-            <form class="navbar-form navbar-right" (ngSubmit)="login(loginForm)" #loginForm="ngForm" *ngIf="!authService.isAuthenticated()">
+            <form class="navbar-form navbar-right" (ngSubmit)="login(loginForm)" #loginForm="ngForm" *ngIf="!isAuthenticated()">
                 <div class="form-group">
                     <input type="text" ngModel #username="ngModel" class="form-control" placeholder="Username" name="username" required>
                 </div>
@@ -23,7 +23,7 @@
                 </div>
                 <button [disabled]="!loginForm.form.valid" type="submit" class="btn btn-success">Login</button>
             </form>
-            <div class="navbar-text navbar-right" *ngIf="authService.isAuthenticated()">
+            <div class="navbar-text navbar-right" *ngIf="isAuthenticated()">
                 Signed in as: <a [routerLink]="['/user/edit/', auth_user.id]">{{auth_user.username}}</a> <button class="btn btn-info btn-xs" (click)="logout()">Logout</button>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
@@ -31,16 +31,16 @@
                     <li routerLinkActive="active">
                         <a routerLink="/home">Home</a>
                     </li>
-                    <li *ngIf="authService.isAuthenticated()" routerLinkActive="active">
+                    <li *ngIf="isAuthenticated()" routerLinkActive="active">
                         <a routerLink="/company">Companies</a>
                     </li>
-                    <li *ngIf="authService.isAuthenticated()" routerLinkActive="active">
+                    <li *ngIf="isAuthenticated()" routerLinkActive="active">
                         <a routerLink="/billing-record">Billing Records</a>
                     </li>
-                    <li *ngIf="authService.isAuthenticated()" routerLinkActive="active">
+                    <li *ngIf="isAuthenticated()" routerLinkActive="active">
                             <a routerLink="/invoice">Invoices</a>
                         </li>
-                    <li *ngIf="authService.isAuthenticated()" routerLinkActive="active">
+                    <li *ngIf="isAuthenticated()" routerLinkActive="active">
                         <a routerLink="/user">Users</a>
                     </li>
                 </ul>
